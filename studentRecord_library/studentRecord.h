@@ -1,18 +1,22 @@
 /*****************************************************************
-* Header file for the brain dead C++ factorial library
-* Author: Benjamin Hugo
-* Date: 2015
+*
+*
+*
 ******************************************************************/
 
 #include <stdexcept>
-/*
-extern "C" {
-void clear(void) ;
-} 
-*/
+#include <fstream>
+using namespace std;
+
 
 #ifndef _CLEAR
 #define _CLEAR
 namespace RSKJAM001{
-void clear(void) ;} 
+struct StudentRecord {string Name;string Surname;string StudentNumber;string ClassRecord;};
+void setStudentRecord(string Name ,string Surname ,string StudentNumber ,string ClassRecord);
+void setname(string Name);
+void clear(void) ;
+void writeFile();
+string readFile();
+}
 #endif

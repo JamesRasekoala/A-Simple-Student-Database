@@ -52,6 +52,7 @@ int main()
 			      cout << "Class Record : " ;
 			      cin >>ClassRecord;
 			      setStudentRecord(Name,Surname ,StudentNumber ,ClassRecord);
+            writeFile();
 
 			/*
 			clear();
@@ -65,14 +66,33 @@ int main()
               cout << " Enter a number (or q to quit) and press return..." << endl;
 */
          }else if (userInput=="1"){
-            cout <<"function SaveToDatabase() called"<<endl;
-            file.open("inputfle.txt");
+            cout <<"function QueryDatabase() called"<<endl;
+           // file.open("inputfle.txt");
+            readFile();
 
          }else if (userInput=="2"){
-            cout <<"function QueryDatabase() called"<<endl;
+            cout <<"function saveDatabase() called"<<endl;
+
+          //  cout <<"#                                            #"<<endl;
+          //  cout <<"##############################################"<<endl;
+           // cout << "Enter the Student Number you want to search: " ;
+           // cin >>StudentNumber;
+           bool info = duplicate(StudentNumber);
+            
+          // RSKJAM001:: bool info << duplicate();
+            if( info==true){
+               cout <<"StudentNumber is a duplicate"<<endl;
+
+            }else{
+              writeFile();
+              cout <<"Student saved"<<endl;
+
+
+            }
+            //readFile();
 
          }else if (userInput=="3"){
-            cout <<"function QueryDatabase() called"<<endl;
+            cout <<"function DisplayStudent() called"<<endl;
 
          }else if (userInput=="4"){
             cout <<"function WriteGradeToDatabase() called"<<endl;
